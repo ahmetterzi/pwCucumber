@@ -1,0 +1,29 @@
+{
+  "name": "pwcucumber",
+  "version": "1.0.0",
+  "description": "Playwright with Cucumber and TypeScript setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:report": "cucumber-js --format html:reports/cucumber-report.html",
+    "playwright:install": "npx playwright install"
+  },
+  "keywords": [
+    "cucumber",
+    "playwright",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.1.0",
+    "@cucumber/messages": "^27.0.2",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1",
+    "allure-cucumberjs": "^3.0.6",
+    "multiple-cucumber-html-reporter": "^3.8.0",
+    "playwright-core": "^1.49.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
