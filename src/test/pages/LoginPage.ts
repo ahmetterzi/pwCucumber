@@ -1,4 +1,5 @@
 import { Page } from 'playwright';
+import { logger } from '../utils/logger';
 
 export class LoginPage {
   private page: Page;
@@ -11,7 +12,7 @@ export class LoginPage {
   }
 
   async navigateTo(url: string): Promise<void> {
-    console.log(`Navigating to: ${url}`);
+    logger.info(`Navigating to: ${url}`);
     await this.page.goto(url);
   }
 
@@ -26,6 +27,7 @@ export class LoginPage {
   async clickSubmitByText(buttonText: string): Promise<void> {
     const locator = this.page.locator(`//button[text()='${buttonText}']`);
     await locator.click();
+    logger.info('Element clicked')
   }
 
   async verifyTextVisible(expectedText: string): Promise<void> {
